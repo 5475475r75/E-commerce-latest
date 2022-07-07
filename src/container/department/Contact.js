@@ -1,249 +1,103 @@
 import React from 'react';
+import * as yup from 'yup';
+import { useFormik, Form, Formik } from 'formik';
+
 
 function Contact(props) {
-    return (
-        <>
-            <main>
-                {/* page-banner-area-start */}
-                <div className="page-banner-area page-banner-height" data-background="assets/img/banner/page-banner-3.jpg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="page-banner-content text-center">
-                                    <h4 className="breadcrumb-title">Contact Us</h4>
-                                    <div className="breadcrumb-two">
-                                        <nav>
-                                            <nav className="breadcrumb-trail breadcrumbs">
-                                                <ul className="breadcrumb-menu">
-                                                    <li className="breadcrumb-trail">
-                                                        <a href="index.html"><span>Home</span></a>
-                                                    </li>
-                                                    <li className="trail-item">
-                                                        <span>Contact Us</span>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* page-banner-area-end */}
-                {/* location-area-start */}
-                <div className="location-area pt-70 pb-25">
-                    <div className="container">
-                        <div className="row mb-25">
-                            <div className="col-xl-12">
-                                <div className="abs-section-title text-center">
-                                    <span>LOCATION STORE</span>
-                                    <h4>Where We Are</h4>
-                                    <p>The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit <br /> in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-xl-3 col-lg-3 col-md-6">
-                                <div className="location-item mb-30">
-                                    <div className="location-image w-img mb-20">
-                                        <img src="assets/img/location/location-1.jpg" alt />
-                                    </div>
-                                    <h6>26 Rue Pelleport - Paris</h6>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-map-marker-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Find us</span>
-                                            <p>Rue Saint-Antoine, Paris, France</p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-phone-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Call us</span>
-                                            <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-envelope" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Mail us</span>
-                                            <p><a href="mailto:store@company.com">store@company.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-3 col-md-6">
-                                <div className="location-item mb-30">
-                                    <div className="location-image w-img mb-20">
-                                        <img src="assets/img/location/location-2.jpg" alt />
-                                    </div>
-                                    <h6>150 Stanley Rd - London</h6>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-map-marker-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Find us</span>
-                                            <p>Brick Ln, Spitalfields, London E1, UK</p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-phone-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Call us</span>
-                                            <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-envelope" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Mail us</span>
-                                            <p><a href="mailto:store@company.com">store@company.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-3 col-md-6">
-                                <div className="location-item mb-30">
-                                    <div className="location-image w-img mb-20">
-                                        <img src="assets/img/location/location-3.jpg" alt />
-                                    </div>
-                                    <h6>1357 Prospect - New York</h6>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-map-marker-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Find us</span>
-                                            <p>Atlantic, Brooklyn, New York, US</p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-phone-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Call us</span>
-                                            <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-envelope" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Mail us</span>
-                                            <p><a href="mailto:store@company.com">store@company.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-3 col-md-6">
-                                <div className="location-item mb-30">
-                                    <div className="location-image w-img mb-20">
-                                        <img src="assets/img/location/location-4.jpg" alt />
-                                    </div>
-                                    <h6>86 Georgia Rd - Mardrid</h6>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-map-marker-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Find us</span>
-                                            <p>Calle del Correo, 4, Madrid, Spain</p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc sm-item-border mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-phone-alt" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Call us</span>
-                                            <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>
-                                        </div>
-                                    </div>
-                                    <div className="sm-item-loc mb-20">
-                                        <div className="sml-icon mr-20">
-                                            <i className="fal fa-envelope" />
-                                        </div>
-                                        <div className="sm-content">
-                                            <span>Mail us</span>
-                                            <p><a href="mailto:store@company.com">store@company.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* location-area-end */}
-                {/* cmamps-area-start */}
-                <div className="cmamps-area">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1899531.5831083965!2d105.806381!3d21.58504!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x515f4860ede9e108!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5n!5e0!3m2!1sen!2sus!4v1644226635446!5m2!1sen!2sus" />
-                </div>
-                {/* cmamps-area-end */}
-                {/* cta-area-start */}
-                <section className="cta-area d-ldark-bg pt-55 pb-10">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-4 col-md-6">
-                                <div className="cta-item cta-item-d mb-30">
-                                    <h5 className="cta-title">Follow Us</h5>
-                                    <p>We make consolidating, marketing and tracking your social media website easy.</p>
-                                    <div className="cta-social">
-                                        <div className="social-icon">
-                                            <a href="#" className="facebook"><i className="fab fa-facebook-f" /></a>
-                                            <a href="#" className="twitter"><i className="fab fa-twitter" /></a>
-                                            <a href="#" className="youtube"><i className="fab fa-youtube" /></a>
-                                            <a href="#" className="linkedin"><i className="fab fa-linkedin-in" /></a>
-                                            <a href="#" className="rss"><i className="fas fa-rss" /></a>
-                                            <a href="#" className="dribbble"><i className="fab fa-dribbble" /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="cta-item mb-30">
-                                    <h5 className="cta-title">Sign Up To Newsletter</h5>
-                                    <p>Join 60.000+ subscribers and get a new discount coupon  on every Saturday.</p>
-                                    <div className="subscribe__form">
-                                        <form action="#">
-                                            <input type="email" placeholder="Enter your email here..." />
-                                            <button>subscribe</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="cta-item mb-30">
-                                    <h5 className="cta-title">Download App</h5>
-                                    <p>DukaMarket App is now available on App Store &amp; Google Play. Get it now.</p>
-                                    <div className="cta-apps">
-                                        <div className="apps-store">
-                                            <a href="#"><img src="assets/img/brand/app_ios.png" alt /></a>
-                                            <a href="#"><img src="assets/img/brand/app_android.png" alt /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* cta-area-end */}
-            </main>
 
-        </>
+  let schemaobj = yup.object().shape({
+    name: yup.string().required("required"),
+    email: yup.string().required("required").email(),
+    subject: yup.string().required("required"),
+    message : yup.string().required("required")
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+    validationSchema : schemaobj,
+    onSubmit: (values , action) => {
+      alert(JSON.stringify(values, null, 2));
+      action.resetForm()
+    },
+  });
+
+  const { handleChange, handleSubmit, handleBlur, errors, touched, values} = formik
+
+
+    return (
+        <main id="main">
+  <section id="contact" className="contact">
+    <div className="container">
+      <div className="section-title">
+        <h2>Contact</h2>
+        <p>Aenean enim orci, suscipit vitae sodales ac, semper in ex. Nunc aliquam eget nibh eu euismod. Donec dapibus
+          blandit quam volutpat sollicitudin. Aenean ac turpis ante. Mauris velit sapien, aliquet aliquet rhoncus quis,
+          luctus at neque. Mauris sit amet massa sed orci vehicula facilisis.</p>
+      </div>
+    </div>
+    <div className="container">
+      <div className="row mt-5">
+        <div className="col-lg-4">
+          <div className="info">
+            <div className="address">
+              <i className="bi bi-geo-alt" />
+              <h4>Location:</h4>
+              <p> F-505, Inovative Plazza New Delhi, India</p>
+            </div>
+            <div className="email">
+              <i className="bi bi-envelope" />
+              <h4>Email:</h4>
+              <p>cityhospital@example.com</p>
+            </div>
+            <div className="phone">
+              <i className="bi bi-phone" />
+              <h4>Call:</h4>
+              <p>+91 9988776655</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-8 mt-5 mt-lg-0">
+          <Formik values={schemaobj}>
+          <Form onSubmit={handleSubmit} className="php-email-form">
+            <div className="row">
+              <div className="col-md-6 form-group">
+                <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" onChange={handleChange} onBlur={handleBlur} value={values.name} />
+                <p className='text-danger'>{errors.name && touched.name ? errors.name : ''}</p>
+              </div>
+              <div className="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" onChange={handleChange} onBlur={handleBlur} value={values.email} />
+                <p className='text-danger'>{errors.email && touched.email ? errors.email : ''}</p>
+              </div>
+            </div>
+            <div className="form-group mt-3">
+              <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" onChange={handleChange} onBlur={handleBlur} value={values.subject} />
+              <p className='text-danger'>{errors.subject && touched.subject ? errors.subject : ''}</p>
+
+            </div>
+            <div className="form-group mt-3">
+              <textarea className="form-control" name="message" rows={5} placeholder="Message"  onChange={handleChange} onBlur={handleBlur} value={values.message}/>
+              <p className='text-danger'>{errors.message && touched.message ? errors.message : ''}</p>
+
+            </div>
+            {/* <div className="my-3">
+              <div className="loading">Loading</div>
+              <div className="error-message" />
+              <div className="sent-message">Your message has been sent. Thank you!</div>
+            </div> */}
+            <div className="text-center"><button type="submit">Send Message</button></div>
+          </Form>
+          </Formik>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
     );
 }
 
